@@ -1,4 +1,4 @@
-var haml = require('hamljs');
+var exec = require("child_process").exec;
 
 var createHamlPreprocessor = function(args, config, logger, helper) {
   config = config || {};
@@ -6,7 +6,9 @@ var createHamlPreprocessor = function(args, config, logger, helper) {
 
   return function(content, file, done) {
     log.debug('Processing "%s".', file.originalPath);
-    done(haml.compile(content))
+    exec('haml ' + file.originalPath, function (err, stdout, stderr) {
+      done(stdout);
+    });
   };
 };
 
