@@ -1,4 +1,4 @@
-var haml = require('haml');
+var haml = require('hamljs');
 
 var createHamlPreprocessor = function(args, config, logger, helper) {
   config = config || {};

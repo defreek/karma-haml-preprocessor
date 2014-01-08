@@ -17,7 +17,7 @@
     "email": "info@subteca.com"
   },
   "dependencies": {
-    "haml": "0.4.3"
+    "hamljs": "~0.6.1"
   },
   "peerDependencies": {
     "karma": ">=0.9"
